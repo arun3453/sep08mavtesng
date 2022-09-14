@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="5" total="11" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="58" started-at="2022-09-14T06:12:31Z" finished-at="2022-09-14T06:12:31Z">
+    <groups>
+      <group name="smoke">
+        <method signature="grpday1.test1()[pri:0, instance:org_tngday5.grpday1@4dfa3a9d]" name="test1" class="org_tngday5.grpday1"/>
+        <method signature="grpday1.test2()[pri:0, instance:org_tngday5.grpday1@4dfa3a9d]" name="test2" class="org_tngday5.grpday1"/>
+      </group> <!-- smoke -->
+      <group name="sanity">
+        <method signature="grpday1.test4()[pri:0, instance:org_tngday5.grpday1@4dfa3a9d]" name="test4" class="org_tngday5.grpday1"/>
+        <method signature="grpday1.test5()[pri:0, instance:org_tngday5.grpday1@4dfa3a9d]" name="test5" class="org_tngday5.grpday1"/>
+      </group> <!-- sanity -->
+      <group name="retest">
+        <method signature="grpday1.test10()[pri:0, instance:org_tngday5.grpday1@4dfa3a9d]" name="test10" class="org_tngday5.grpday1"/>
+        <method signature="grpday1.test9()[pri:0, instance:org_tngday5.grpday1@4dfa3a9d]" name="test9" class="org_tngday5.grpday1"/>
+      </group> <!-- retest -->
+    </groups>
+    <test name="Test" duration-ms="58" started-at="2022-09-14T06:12:31Z" finished-at="2022-09-14T06:12:31Z">
+      <class name="org_tngday5.grpday1">
+        <test-method status="PASS" signature="test1()[pri:0, instance:org_tngday5.grpday1@4dfa3a9d]" name="test1" duration-ms="9" started-at="2022-09-14T06:12:31Z" finished-at="2022-09-14T06:12:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="test10()[pri:0, instance:org_tngday5.grpday1@4dfa3a9d]" name="test10" duration-ms="2" started-at="2022-09-14T06:12:31Z" finished-at="2022-09-14T06:12:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test10 -->
+        <test-method status="PASS" signature="test2()[pri:0, instance:org_tngday5.grpday1@4dfa3a9d]" name="test2" duration-ms="0" started-at="2022-09-14T06:12:31Z" finished-at="2022-09-14T06:12:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method status="PASS" signature="test4()[pri:0, instance:org_tngday5.grpday1@4dfa3a9d]" name="test4" duration-ms="2" started-at="2022-09-14T06:12:31Z" finished-at="2022-09-14T06:12:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test4 -->
+        <test-method status="PASS" signature="test5()[pri:0, instance:org_tngday5.grpday1@4dfa3a9d]" name="test5" duration-ms="2" started-at="2022-09-14T06:12:31Z" finished-at="2022-09-14T06:12:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test5 -->
+        <test-method status="PASS" signature="test9()[pri:0, instance:org_tngday5.grpday1@4dfa3a9d]" name="test9" duration-ms="7" started-at="2022-09-14T06:12:31Z" finished-at="2022-09-14T06:12:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test9 -->
+      </class> <!-- org_tngday5.grpday1 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
