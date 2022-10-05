@@ -30,6 +30,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.ITestResult;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -232,6 +237,12 @@ public class baseclass {
 		File to=new File("C:\\Users\\91805\\eclipse-workspace\\MavenProject\\src\\test\\resources\\Screenshot\\"+time+".png");
 		FileUtils.copyFile(from, to);
 	}
+	public static void takescreenshot(String a) throws IOException {
+		TakesScreenshot tk=(TakesScreenshot)driver;
+		File from = tk.getScreenshotAs(OutputType.FILE);
+		File to=new File(System.getProperty("user.dir")+"\\src\\test\\resources\\screshot"+"imagename"+".png");
+		FileUtils.copyFile(from, to);
+	}
 	// java setAtrribute
 	public static void javasetAttribute(String text,WebElement e) {
 		JavascriptExecutor js=(JavascriptExecutor)driver;
@@ -359,7 +370,51 @@ public class baseclass {
 		
 
 	}
+	/////////////html report generate
+	static ExtentHtmlReporter htmlrep;
+	static ExtentReports repot;
 	
+	public static void htmlstartrep(String f) {
+		 htmlrep=new ExtentHtmlReporter(f);
+		htmlrep.config().setDocumentTitle("testng 8am green");	
+		htmlrep.config().setReportName("fipkart login");
+		htmlrep.config().setTheme(Theme.DARK);
+		
+		repot=new ExtentReports();
+		repot.attachReporter(htmlrep);
+		repot.setSystemInfo("browser name", "edge");
+		repot.setSystemInfo("browser ver", "105");
+		repot.setSystemInfo("os", "windows 11");
+		repot.setSystemInfo("env", "QA");
+		repot.setSystemInfo("sprint", "20");
+
+	}
+	public static void htmlcontindoce(ITestResult r) {
+		String name = r.getName();
+		
+		int status = r.getStatus();
+		switch (status) {
+		case 1:
+			repot.createTest(name).pass("test ca se pass");
+			break;
+		case 2:
+			repot.createTest(name).fail("test ca se fail");
+			break;
+
+		default:
+			repot.createTest(name).skip("test ca se skip");
+
+			break;
+		}
+
+	}
+	public static void htmlendrep() {
+		repot.flush();
+
+	}
+
+
+
 	
 	
 

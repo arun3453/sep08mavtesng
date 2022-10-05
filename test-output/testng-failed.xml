@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org_tngday3.paramet1">
+      <class name="org_htmlreportt.orenge1">
         <methods>
-          <include name="afterclas"/>
-          <include name="aftermat"/>
-          <include name="befclas"/>
-          <include name="test"/>
+          <include name="test1"/>
+          <include name="befclass"/>
+          <include name="aftcl"/>
+          <include name="aftmet"/>
           <include name="befmet"/>
         </methods>
-      </class> <!-- org_tngday3.paramet1 -->
+      </class> <!-- org_htmlreportt.orenge1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
